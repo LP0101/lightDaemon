@@ -44,8 +44,7 @@ def monitor():
         s = sPoll()
         sKitchen = sKitchen(s)
         sHall = sHall(s)
-        
-
+        time.sleep(1)
 
 def run():
     with daemon.DaemonContext():

@@ -27,13 +27,13 @@ kitchen = [6, 7]
 hall = [4, 5]
 
 #Light Setters
-def light_trigger(room, bri, xy, trans):
-    b.set_light(room, {'on': True, 'bri': bri, 'xy': xy, 'transitiontime': trans})
-def light_dim(room, bri, trans):
-    newBri = math.floor(bri)
-    b.set_light(room, {'bri': newBri, 'transitiontime': trans})
-def light_off(room, trans):
-    b.set_light(room, {'on': False, 'transitiontime': trans})
+def light_trigger(room, bri, xy):
+    b.set_light(room, {'on': True, 'bri': bri, 'xy': xy, 'transitiontime': 15})
+def light_dim(room, bri):
+    newBri = math.floor(bri/2)
+    b.set_light(room, {'bri': newBri, 'transitiontime': 15})
+def light_off(room):
+    b.set_light(room, {'on': False, 'transitiontime': 15})
 
 
 def monitor():
